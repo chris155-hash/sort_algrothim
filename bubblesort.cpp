@@ -18,7 +18,7 @@ void bubblesort(int nums[],int n){
 int main(){
     int nums[6] = {1,2,5,4,3,6};
     int n = sizeof(nums) / sizeof(nums[0]);
-    bubblesort(nums,n);
+    bubblesort(nums,n);   //数组作为函数参数时，实际上传递的是数组首元素的指针（即 int* nums）。所以会修改外部的nums
     for (int i = 0;i < n;i++){
         cout << nums[i];
     }
