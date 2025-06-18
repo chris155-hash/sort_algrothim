@@ -4,7 +4,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void select(int * nums,int n){     //这里和bubblesort写的不一样，传一个指向int类型的指针变量。传进去nums的首元素地址，和元素数量。
+void selectsort(int * nums,int n){     //这里和bubblesort写的不一样，传一个指向int类型的指针变量。传进去nums的首元素地址，和元素数量。
     for (int i = 0;i < n;i++){
         int min_i = i;
         for (int j = i + 1;j < n;j++){
@@ -17,7 +17,7 @@ void select(int * nums,int n){     //这里和bubblesort写的不一样，传一
 int main(){
     int nums[6] = {1,3,4,2,5,6};
     int n = sizeof(nums) / sizeof(nums[0]);
-    select(nums,n);    //这里看起来传递的不是指针，实际上nums会自动转换为int*指针类型，即&nums[0]。。。select(&nums[0],n);也是ok的
+    selectsort(nums,n);    //这里看起来传递的不是指针，实际上nums会自动转换为int*指针类型，即&nums[0]。。。select(&nums[0],n);也是ok的
     for (int i = 0;i < n;i++){
         cout << nums[i];
     }
